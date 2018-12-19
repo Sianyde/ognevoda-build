@@ -6,6 +6,8 @@ $(window).scroll(function() {
         $('.header').css("background", "none"), 200;
     }
 });
+
+
 jQuery(document).ready(function($) {
 	$('.whywe-block').mouseenter(function() {
 		$(this).children(".whywe-block__img").css('opacity', '1');
@@ -24,19 +26,15 @@ jQuery(document).ready(function($) {
     }
   });
 
-
-
-});
-
 $('.slider').slick({
-	dots: false,
-	arrow: true,
+  dots: false,
+  arrow: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     infinite: true,
-  	slide: ".slide",
-  	prevArrow: ".slider .slider__prev",
-  	nextArrow: ".slider .slider__next",
+    slide: ".slide",
+    prevArrow: ".slider .slider__prev",
+    nextArrow: ".slider .slider__next",
 });
 
 $(function() {
@@ -84,7 +82,7 @@ $(function() {
         $('.slider-sale').slick('resize');
     });
 });
-$('.rozrahunok-door-type').click( function(event){
+$('.rozrahunok-door-type, .sidebar-popup').click( function(event){
   event.preventDefault();
   $('#overlay').fadeIn(400,
     function(){ 
@@ -130,6 +128,10 @@ $( ".write-us-btn" ).click(function() {
   });
 });
 
+$( ".navigation-btn" ).click(function() {
+  $( ".sidebar" ).slideToggle();
+});
+
 
 function checkParams() {
     var name = $('#name-proioma').val();
@@ -143,4 +145,24 @@ function checkParams() {
     } else {
         $('.rozrah-price-popup #submit').css('display', 'none');
     }
+
 }
+
+// style select
+$('select').styler();
+
+// load more goods
+$('#loadMoreGoods').click(function() {
+    $('#goods').append('<div class="col-12 col-sm-6 col-lg-4"><div class="goods-card"> <div class="goods-card__img"><img src="img/goods/window-2.png" alt=""></div><div class="goods-card__body"><p class="goods-cards__title">Прямокутна дверка</p><span class="goods-cards__size">Розмір: 800х350 мм</span><div class="goods-card__reviews"><div class="stars"><img src="img/icons/star-green.svg" alt=""><img src="img/icons/star-green.svg" alt=""><img src="img/icons/star-green.svg" alt=""><img src="img/icons/star-green.svg" alt=""><img src="img/icons/star-green.svg" alt=""></div><a href="#">4 відгука</a></div></div><div class="goods-cards__footer"><div class="goods-cards__price">5 999 грн. </div><a href="#" class="goods-cards__btn"><img src="img/shopping-cart-empty-side-view.svg" alt="shopping-cart"> вкорзину</a></div></div></div><div class="col-12 col-sm-6 col-lg-4"><div class="goods-card"> <div class="goods-card__img"><img src="img/goods/window-2.png" alt=""></div><div class="goods-card__body"><p class="goods-cards__title">Прямокутна дверка</p><span class="goods-cards__size">Розмір: 800х350 мм</span><div class="goods-card__reviews"><div class="stars"><img src="img/icons/star-green.svg" alt=""><img src="img/icons/star-green.svg" alt=""><img src="img/icons/star-green.svg" alt=""><img src="img/icons/star-green.svg" alt=""><img src="img/icons/star-green.svg" alt=""></div><a href="#">4 відгука</a></div></div><div class="goods-cards__footer"><div class="goods-cards__price">5 999 грн. </div><a href="#" class="goods-cards__btn"><img src="img/shopping-cart-empty-side-view.svg" alt="shopping-cart"> вкорзину</a></div></div></div><div class="col-12 col-sm-6 col-lg-4"><div class="goods-card"> <div class="goods-card__img"><img src="img/goods/window-2.png" alt=""></div><div class="goods-card__body"><p class="goods-cards__title">Прямокутна дверка</p><span class="goods-cards__size">Розмір: 800х350 мм</span><div class="goods-card__reviews"><div class="stars"><img src="img/icons/star-green.svg" alt=""><img src="img/icons/star-green.svg" alt=""><img src="img/icons/star-green.svg" alt=""><img src="img/icons/star-green.svg" alt=""><img src="img/icons/star-green.svg" alt=""></div><a href="#">4 відгука</a></div></div><div class="goods-cards__footer"><div class="goods-cards__price">5 999 грн. </div><a href="#" class="goods-cards__btn"><img src="img/shopping-cart-empty-side-view.svg" alt="shopping-cart"> вкорзину</a></div></div></div>');
+});
+
+// style scrollBar
+new SimpleBar(document.getElementById('filter'), { autoHide: false });
+new SimpleBar(document.getElementById('shopInfo'), { autoHide: false });
+
+$('.btn-filter').click(function() {
+    $('.filter').toggleClass('openedFilter');
+});
+
+
+});
