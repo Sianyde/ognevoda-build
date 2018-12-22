@@ -1083,21 +1083,12 @@ header .container {
     .contacts #map iframe {
       height: 700px; }
   .contacts-information {
-    width: 33rem; }
-    .contacts-information__social {
-      margin-left: 2rem; }
-      .contacts-information__social ul li {
-        display: block;
-        margin-bottom: 0.5rem; }
-    .contacts-information__block {
-      position: absolute;
-      right: 3.5rem;
-      bottom: 2rem;
-      top: 2rem;
-      z-index: 4;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex; }
+    position: absolute;
+    right: 7rem;
+    bottom: 2rem;
+    top: 2rem;
+    width: 33rem;
+    z-index: 4; }
     .contacts-information ul li {
       margin: 0.2rem 0; }
       .contacts-information ul li a:hover {
@@ -2214,19 +2205,17 @@ header .container {
   .doors-type-popup {
     padding: 3rem; }
   .contacts-information {
+    margin-top: 2rem;
+    width: 100%;
+    right: 0rem;
+    top: 0;
+    position: inherit;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
-            justify-content: space-between;
-    width: 100%; }
-    .contacts-information__block {
-      margin-top: 2rem;
-      width: 100%;
-      right: 0rem;
-      top: 0;
-      position: inherit; }
+            justify-content: space-between; }
     .contacts-information-top {
       width: 100%; }
     .contacts-information-bottom {
@@ -2487,23 +2476,6 @@ header .container {
     min-width: 165%; }
   .contacts-information-top {
     text-align: center; }
-  .contacts-information__block {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column; }
-  .contacts-information__social {
-    margin-left: 0; }
-    .contacts-information__social ul {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center;
-      margin-top: 5rem; }
-      .contacts-information__social ul li {
-        margin-right: 0.5rem; }
   .contacts-information .work-hours {
     margin-top: 2rem; }
   .contacts-information .work-hours:after {

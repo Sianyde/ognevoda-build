@@ -193,4 +193,3 @@ $('.slider-nav').slick({
           $(".filter").removeClass("openedFilter");
         }
     });
- });
